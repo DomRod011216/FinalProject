@@ -1,7 +1,7 @@
 #main
 
 #Learning about socket library.
-import my_functions
+# import my_functions
 import socket
 import sqlite3
 
@@ -21,9 +21,9 @@ c = conn.cursor()
 #             ipaddress text
 #             )""")
 
-# c.execute("INSERT INTO pc_information VALUES (?, ?)", (hostname, ip_addr))
-#
-# conn.commit()
+c.execute("INSERT INTO pc_information VALUES (?, ?)", (hostname, ip_addr))
+
+conn.commit()
 
 c.execute("SELECT * FROM pc_information")
 
